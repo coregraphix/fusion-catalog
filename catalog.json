@@ -1,98 +1,79 @@
 {
-  "version": "1.3",
-  "updated": "2026-05-03",
-  "github_org": "cgx33",
-  "github_repo": "fusion-catalog",
-  "release_url_template": "https://github.com/{org}/{repo}/releases/download/{tag}/{file}",
-  "raw_url_template": "https://raw.githubusercontent.com/{org}/{repo}/main/{path}",
-  "sdk": {
-    "latest": {
-      "release_tag": "fusion-v4.0.3.24",
-      "version": "4.0.3.24",
-      "released": "2026-05-03",
-      "size_mb": 8,
-      "release_notes_url": "https://github.com/cgx33/fusion-release/releases/tag/fusion-v4.0.3.24"
-    }
-  },
-  "targets": {
-    "nano25": {
-      "name": "Nano25",
-      "description": "Coregraphix DE25-Nano evaluation board (Altera Agilex 5 SoC).",
-      "vendor": "Terasic",
-      "vendor_docs_path": "nano25/vendor/",
-      "setup": {
-        "name": "Fusion-capable Nano25 (one-time setup)",
-        "short_description": "Program the FPGA bitstream + flash the Linux SD card. Required before running any demo.",
-        "guide_path": "nano25/setup/README.md",
-        "step1_firmware": {
-          "name": "FPGA bitstream",
-          "short_description": "Program the Fusion bitstream into QSPI flash via Quartus Programmer (~5 min, one-time per board).",
-          "instructions_path": "nano25/setup/firmware/README.md",
-          "release_tag": "setup-firmware-v0.1",
-          "filename": "setup-firmware-v0.1.zip",
-          "size_kb": 4957,
-          "bundle_contents": ["README.md", "golden_top_hps.jic", "program_qspi_flash/flash_program.bat", "program_qspi_flash/flash_erase.bat"],
-          "fusion_sdk": "v4.0.3.22",
-          "tools_required": ["Quartus Prime Pro v25.1.1+", "USB Blaster III"]
-        },
-        "step2_sdcard": {
-          "name": "Linux + Fusion image",
-          "short_description": "Flash the Linux + Fusion userspace image onto a MicroSD card (~15 min including write time).",
-          "instructions_path": "nano25/setup/sdcard/README.md",
-          "release_tag": "setup-sdcard-v0.1",
-          "filename": "nano25-fusion.img.gz",
-          "size_mb": 1393,
-          "fusion_sdk": "v4.0.3.22",
-          "tools_required": ["Win32 Disk Imager / Rufus / dd", "MicroSD ≥ 8 GB"]
-        }
-      },
-      "demos": [
-        {
-          "id": "cockpit-pfd",
-          "version": "0.1",
-          "name": "Avionics Primary Flight Display",
-          "short_description": "Glass cockpit PFD: attitude, speed, altitude, heading, FMA, V-speeds.",
-          "screenshot_url": "https://raw.githubusercontent.com/cgx33/fusion-catalog/main/nano25/catalog/cockpit-pfd-v0.1/screenshot.png",
-          "video_url": "https://raw.githubusercontent.com/cgx33/fusion-catalog/main/nano25/catalog/cockpit-pfd-v0.1/preview.mp4",
-          "manifest_path": "nano25/catalog/cockpit-pfd-v0.1/manifest.json",
-          "readme_path": "nano25/catalog/cockpit-pfd-v0.1/README.md",
-          "release_tag": "cockpit-pfd-v0.1",
-          "binary_filename": "cockpit-pfd.elf",
-          "binary_size_kb": 1566,
-          "fusion_sdk": "v4.0.3.22",
-          "requires_setup": true
-        },
-        {
-          "id": "cockpit-eicas",
-          "version": "0.1",
-          "name": "Engine Indication & Crew Alerting System",
-          "short_description": "Engine gauges, warning banners, system status — EICAS for cockpit displays.",
-          "screenshot_url": "https://raw.githubusercontent.com/cgx33/fusion-catalog/main/nano25/catalog/cockpit-eicas-v0.1/screenshot.png",
-          "video_url": "https://raw.githubusercontent.com/cgx33/fusion-catalog/main/nano25/catalog/cockpit-eicas-v0.1/preview.mp4",
-          "manifest_path": "nano25/catalog/cockpit-eicas-v0.1/manifest.json",
-          "readme_path": "nano25/catalog/cockpit-eicas-v0.1/README.md",
-          "release_tag": "cockpit-eicas-v0.1",
-          "binary_filename": "cockpit-eicas.elf",
-          "binary_size_kb": 1566,
-          "fusion_sdk": "v4.0.3.22",
-          "requires_setup": true
-        },
-        {
-          "id": "cockpit-multi",
-          "version": "0.1",
-          "name": "Integrated Glass Cockpit",
-          "short_description": "PFD + EICAS + Alerts composed on one screen — Fusion UI composition showcase.",
-          "screenshot_url": "https://raw.githubusercontent.com/cgx33/fusion-catalog/main/nano25/catalog/cockpit-multi-v0.1/screenshot.png",
-          "video_url": "https://raw.githubusercontent.com/cgx33/fusion-catalog/main/nano25/catalog/cockpit-multi-v0.1/preview.mp4",
-          "manifest_path": "nano25/catalog/cockpit-multi-v0.1/manifest.json",
-          "readme_path": "nano25/catalog/cockpit-multi-v0.1/README.md",
-          "release_tag": "cockpit-multi-v0.1",
-          "binary_filename": "cockpit-multi.elf",
-          "binary_size_kb": 1566,
-          "fusion_sdk": "v4.0.3.22",
-          "requires_setup": true
-        }
-      ]
-    }
-  }
+    "version":  "1.4",
+    "updated":  "2026-06-16",
+    "github_org":  "cgx33",
+    "github_repo":  "fusion-catalog",
+    "release_url_template":  "https://github.com/{org}/{repo}/releases/download/{tag}/{file}",
+    "raw_url_template":  "https://raw.githubusercontent.com/{org}/{repo}/main/{path}",
+    "sdk":  {
+                "latest":  {
+                               "release_tag":  "fusion-v4.1.53",
+                               "version":  "",
+                               "released":  "2026-06-16",
+                               "size_mb":  20,
+                               "release_notes_url":  "https://github.com/cgx33/fusion-release/releases/tag/fusion-v4.1.53"
+                           }
+            },
+    "targets":  {
+                    "nano25":  {
+                                   "name":  "Nano25",
+                                   "description":  "Coregraphix DE25-Nano evaluation board (Altera Agilex 5 SoC).",
+                                   "vendor":  "Terasic",
+                                   "vendor_docs_path":  "nano25/vendor/",
+                                   "setup":  {
+                                                 "name":  "Fusion-capable Nano25 (one-time setup)",
+                                                 "short_description":  "Program the FPGA bitstream + flash the Linux SD card. Required before running any demo.",
+                                                 "guide_path":  "nano25/setup/README.md",
+                                                 "step1_firmware":  {
+                                                                        "name":  "FPGA bitstream",
+                                                                        "short_description":  "Program the Fusion bitstream into QSPI flash via Quartus Programmer (~5 min, one-time per board).",
+                                                                        "instructions_path":  "nano25/setup/firmware/README.md",
+                                                                        "release_tag":  "setup-firmware-v0.1",
+                                                                        "filename":  "setup-firmware-v0.1.zip",
+                                                                        "size_kb":  4957,
+                                                                        "bundle_contents":  [
+                                                                                                "README.md",
+                                                                                                "golden_top_hps.jic",
+                                                                                                "program_qspi_flash/flash_program.bat",
+                                                                                                "program_qspi_flash/flash_erase.bat"
+                                                                                            ],
+                                                                        "fusion_sdk":  "v4.0.3.22",
+                                                                        "tools_required":  [
+                                                                                               "Quartus Prime Pro v25.1.1+",
+                                                                                               "USB Blaster III"
+                                                                                           ]
+                                                                    },
+                                                 "step2_sdcard":  {
+                                                                      "name":  "Linux + Fusion image",
+                                                                      "short_description":  "Flash the Linux + Fusion userspace image onto a MicroSD card (~15 min including write time).",
+                                                                      "instructions_path":  "nano25/setup/sdcard/README.md",
+                                                                      "release_tag":  "setup-sdcard-v0.1",
+                                                                      "filename":  "nano25-fusion.img.gz",
+                                                                      "size_mb":  1393,
+                                                                      "fusion_sdk":  "v4.0.3.22",
+                                                                      "tools_required":  [
+                                                                                             "Win32 Disk Imager / Rufus / dd",
+                                                                                             "MicroSD ≥ 8 GB"
+                                                                                         ]
+                                                                  }
+                                             },
+                                   "demos":  [
+                                                 {
+                                                     "id":  "glass-cockpit",
+                                                     "version":  "4.1.0",
+                                                     "name":  "Avionics Glass Cockpit",
+                                                     "short_description":  "Glass cockpit composition: PFD + Engine + Alerts + ND on a single screen.",
+                                                     "screenshot_url":  "https://raw.githubusercontent.com/cgx33/fusion-catalog/main/nano25/catalog/nano25-glass-cockpit-v4.1.0/screenshot.png",
+                                                     "video_url":  "https://raw.githubusercontent.com/cgx33/fusion-catalog/main/nano25/catalog/nano25-glass-cockpit-v4.1.0/preview.mp4",
+                                                     "manifest_path":  "nano25/catalog/nano25-glass-cockpit-v4.1.0/manifest.json",
+                                                     "readme_path":  "nano25/catalog/nano25-glass-cockpit-v4.1.0/README.md",
+                                                     "release_tag":  "nano25-glass-cockpit-v4.1.0",
+                                                     "binary_filename":  "glass-cockpit.elf",
+                                                     "binary_size_kb":  2581,
+                                                     "fusion_sdk":  "v4.1.52",
+                                                     "requires_setup":  true
+                                                 }
+                                             ]
+                               }
+                }
 }
