@@ -5,9 +5,9 @@
   "short_description": "Glass cockpit composition: PFD + Engine + Alerts + ND on a single screen.",
   "target": "nano25",
   "binary": "glass_cockpit.elf",
-  "binary_size_kb": 2581,
+  "binary_size_kb": 2584,
   "build": {
-    "fusion_sdk_version": "v4.1.52",
+    "fusion_sdk_version": "v4.1.60",
     "profile": "release",
     "link_mode": "archive",
     "stripped": false
