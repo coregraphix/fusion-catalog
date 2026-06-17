@@ -70,7 +70,7 @@ fusion-catalog/
 | 0 | Watch a video | Website home page |
 | 1 | Provision your Nano25 (FPGA + Linux SD) | `<target>/setup/` |
 | 2 | Drop additional ELF demos | `<target>/catalog/` |
-| 3 | Download the SDK Starter | [`fusion-release`](https://github.com/cgx33/fusion-release) |
+| 3 | Download the SDK Starter | [`fusion-sdk`](https://github.com/cgx33/fusion-sdk) releases |
 
 Tier 0 lives on the website only.
 Tier 3 lives in a separate repository.
@@ -136,6 +136,5 @@ not part of this public repository:
 
 ## Cross-references
 
-- Fusion SDK source : [`fusion-sdk`](https://github.com/cgx33/fusion-sdk) (private)
-- Fusion SDK packaged releases : [`fusion-release`](https://github.com/cgx33/fusion-release) (private until released)
+- Fusion SDK source + packaged releases : [`fusion-sdk`](https://github.com/cgx33/fusion-sdk) (private)
 - Coregraphix website : [`fusion.coregraphix.com`](https://fusion.coregraphix.com)

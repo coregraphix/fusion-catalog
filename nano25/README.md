@@ -44,4 +44,4 @@ Linux + FPGA environment is shared across all demos.
 Convinced and want to build your own UI? Download the Fusion SDK
 Starter package and use the AI-assisted workflow.
 
-→ See [`https://github.com/cgx33/fusion-release`](https://github.com/cgx33/fusion-release)
+→ See [`https://github.com/cgx33/fusion-sdk`](https://github.com/cgx33/fusion-sdk)

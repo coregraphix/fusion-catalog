@@ -14,7 +14,7 @@ For a zero-setup experience (no SSH needed), see
 `../image-sdcard/` (Tier 2 — bootable SD image).
 
 For full development capability, download the Fusion SDK Starter
-(Tier 3 — see `https://github.com/cgx33/fusion-release`).
+(Tier 3 — see `https://github.com/cgx33/fusion-sdk`).
 
 ## Available demos
 
