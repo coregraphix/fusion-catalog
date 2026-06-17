@@ -1,17 +1,17 @@
 {
     "version":  "1.4",
-    "updated":  "2026-06-16",
+    "updated":  "2026-06-17",
     "github_org":  "cgx33",
     "github_repo":  "fusion-catalog",
     "release_url_template":  "https://github.com/{org}/{repo}/releases/download/{tag}/{file}",
     "raw_url_template":  "https://raw.githubusercontent.com/{org}/{repo}/main/{path}",
     "sdk":  {
                 "latest":  {
-                               "release_tag":  "fusion-v4.1.53",
+                               "release_tag":  "fusion-v4.1.56",
                                "version":  "",
-                               "released":  "2026-06-16",
+                               "released":  "2026-06-17",
                                "size_mb":  20,
-                               "release_notes_url":  "https://github.com/cgx33/fusion-release/releases/tag/fusion-v4.1.53"
+                               "release_notes_url":  "https://github.com/cgx33/fusion-release/releases/tag/fusion-v4.1.56"
                            }
             },
     "targets":  {
