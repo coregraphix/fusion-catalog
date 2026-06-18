@@ -9,7 +9,7 @@
     "latest": {
       "release_tag": "fusion-v4.1.60",
       "version": "4.1.60",
-      "released": "2026-06-18",
+      "released": "2026-06-17",
       "size_mb": 10,
       "release_notes_url": "https://github.com/cgx33/fusion-sdk/releases/tag/fusion-v4.1.60"
     }
@@ -62,7 +62,7 @@
           "id": "glass-cockpit",
           "version": "4.1.60",
           "name": "Avionics Glass Cockpit",
-          "short_description": "Glass cockpit composition: PFD + Engine + Alerts + ND on a single screen.",
+          "short_description": "Glass cockpit composition: PFD + ND + Engine + Alerts on a single screen.",
           "screenshot_url": "https://raw.githubusercontent.com/cgx33/fusion-catalog/main/nano25/demos/nano25-glass-cockpit-v4.1.60/screenshot.png",
           "video_url": "https://raw.githubusercontent.com/cgx33/fusion-catalog/main/nano25/demos/nano25-glass-cockpit-v4.1.60/preview.mp4",
           "manifest_path": "nano25/demos/nano25-glass-cockpit-v4.1.60/manifest.json",
