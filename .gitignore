@@ -11,7 +11,7 @@ nano25/setup/sdcard/*.img.xz
 nano25/setup/sdcard/*.xz
 
 # Tier 2 demo binaries
-nano25/catalog/*/*.elf
+nano25/demos/*/*.elf
 
 # Tier 3 advanced : reference design (uploaded as Release asset only)
 nano25/refdesign/*.zip

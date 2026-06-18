@@ -28,7 +28,7 @@ read on.
 | Path | Purpose | Consumed by |
 |---|---|---|
 | `catalog.json` | Master index of available setup assets + demos | Website (live fetch) |
-| `nano25/setup/`, `nano25/catalog/` | Per-asset folders (README + metadata + bundle sources) | Website (READMEs fetched), team (source of truth) |
+| `nano25/setup/`, `nano25/demos/` | Per-asset folders (README + metadata + bundle sources) | Website (READMEs fetched), team (source of truth) |
 | `nano25/vendor/` | Vendor hardware documentation (Terasic) | Customers via website link |
 
 Heavy binaries (`.jic`, `.img.gz`, `.elf`, `.zip`) are **not committed
