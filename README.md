@@ -43,14 +43,13 @@ fusion-catalog/
 ├── catalog.json                ← master index (fetched by the website)
 ├── .gitignore                  ← excludes binary assets (live in Releases)
 └── <target>/                   ← per-target content (currently: nano25/)
-    ├── README.md               ← target landing (rendered on github.com)
     ├── vendor/                 ← vendor hardware documentation
     ├── setup/                  ← Tier 1: one-time provisioning
     │   ├── firmware/           ← Step 1: FPGA bitstream + Quartus scripts
     │   │   ├── README.md
     │   │   ├── fusion_top_hps.jic                  (gitignored, Release asset)
     │   │   ├── program_qspi_flash/*.bat
-    │   │   └── setup-firmware-v0.1.zip             (gitignored, Release asset)
+    │   │   └── setup-firmware-v<x.y>.zip           (gitignored, Release asset)
     │   └── sdcard/             ← Step 2: Linux + Fusion image
     │       ├── README.md
     │       └── nano25-setup-sdcard-v<x.y>.img.xz   (gitignored, Release asset)
