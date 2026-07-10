@@ -8,43 +8,46 @@ binary filename changes.
 - The one-time Nano25 setup is done (FPGA bitstream + SD card image —
   see the setup section on the Evaluate page).
 - The board is powered, with HDMI connected to a display.
-- Your PC and the board are on the same Ethernet network.
+- Ethernet: plug the board into your LAN, **or** directly into your PC
+  with a point-to-point cable — no network infrastructure needed.
 
-## 1. Give the board an IP address
+## 1. Deploy and run
 
-Open the serial console (USB-UART, 115200 bauds — you land directly on
-a root shell, no password) and assign an address:
+The board configures its network by itself at boot and announces
+itself as **`nano25.local`**. No password is required.
 
-```sh
-ifconfig eth0 192.168.2.15
-```
-
-Pick any address that fits your local network. This is only needed
-once per boot.
-
-## 2. Deploy and run
-
-From your PC (no password is required):
+From your PC:
 
 ```bash
-scp <demo>.elf root@192.168.2.15:/root/
-ssh root@192.168.2.15 "chmod +x /root/<demo>.elf && /root/<demo>.elf"
+scp <demo>.elf root@nano25.local:/root/
+ssh root@nano25.local "chmod +x /root/<demo>.elf && /root/<demo>.elf"
 ```
 
 The demo UI appears on the HDMI output.
 
-## 3. Stop
+## 2. Stop
 
 `Ctrl+C` in the SSH session, or:
 
 ```bash
-ssh root@192.168.2.15 "pkill <demo>"
+ssh root@nano25.local "pkill <demo>"
+```
+
+## If `nano25.local` does not resolve
+
+Some corporate networks block mDNS. The board also always carries the
+static address **`192.168.77.15`** — connect it directly to your PC
+with an Ethernet cable, set your PC's adapter to `192.168.77.10`
+(mask `255.255.255.0`), and use the address instead of the name:
+
+```bash
+ssh root@192.168.77.15
 ```
 
 ## Troubleshooting
 
-- **`scp` cannot connect** — check the IP is assigned (step 1) and
-  that your PC is on the same subnet.
+- **`scp`/`ssh` cannot connect** — check the Ethernet link, and try
+  the static-address fallback above.
 - **Demo starts but the display stays blank** — verify the HDMI
   connection and that the one-time setup completed (LED7 must blink
   ~3 times per second: that is the Fusion firmware heartbeat).

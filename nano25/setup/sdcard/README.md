@@ -92,25 +92,28 @@ console drops you straight into a root shell.
 
 ### SSH
 
-Assign an IP address to the board from the serial console, e.g.:
+The board configures its network by itself at boot and announces
+itself as **`nano25.local`** — plug the Ethernet cable into your LAN,
+or directly into your PC (point-to-point, no network infrastructure
+needed), and connect:
 
 ```sh
-ifconfig eth0 192.168.2.15
-```
-
-Then connect from your PC (same network):
-
-```sh
-ssh root@192.168.2.15
+ssh root@nano25.local
 ```
 
 No password is required. You can now copy binaries with `scp` and
 run them directly:
 
 ```sh
-scp my_app root@192.168.2.15:/root/
-ssh root@192.168.2.15 'chmod +x /root/my_app && /root/my_app'
+scp my_app root@nano25.local:/root/
+ssh root@nano25.local 'chmod +x /root/my_app && /root/my_app'
 ```
+
+If your network blocks mDNS (`nano25.local` does not resolve), the
+board also always carries the static address **`192.168.77.15`**:
+connect it directly to your PC, set your PC's adapter to
+`192.168.77.10` (mask `255.255.255.0`), and use
+`ssh root@192.168.77.15`.
 
 > **Note**: this open-access configuration is intended for evaluation
 > on a local development network. To lock the board down, set a root
