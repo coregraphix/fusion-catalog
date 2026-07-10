@@ -31,7 +31,7 @@ read on.
 | `nano25/setup/`, `nano25/demos/` | Per-asset folders (README + metadata + bundle sources) | Website (READMEs fetched), team (source of truth) |
 | `nano25/vendor/` | Vendor hardware documentation (Terasic) | Customers via website link |
 
-Heavy binaries (`.jic`, `.img.gz`, `.elf`, `.zip`) are **not committed
+Heavy binaries (`.jic`, `.img.xz`, `.elf`, `.zip`) are **not committed
 to git**. They are distributed as **GitHub Release assets** attached
 to a tag matching the asset's version. See `.gitignore` for the list.
 
@@ -54,8 +54,8 @@ fusion-catalog/
     │   │   └── setup-firmware-v0.1.zip             (gitignored, Release asset)
     │   └── sdcard/             ← Step 2: Linux + Fusion image
     │       ├── README.md
-    │       └── nano25-fusion.img.gz                (gitignored, Release asset)
-    └── catalog/                ← Tier 2: additional ELF demos
+    │       └── nano25-setup-sdcard-v<x.y>.img.xz   (gitignored, Release asset)
+    └── demos/                  ← Tier 2: additional ELF demos
         ├── README.md
         └── <demo>-v<x.y>/
             ├── README.md       ← rendered on the website
@@ -69,7 +69,7 @@ fusion-catalog/
 |---|---|---|
 | 0 | Watch a video | Website home page |
 | 1 | Provision your Nano25 (FPGA + Linux SD) | `<target>/setup/` |
-| 2 | Drop additional ELF demos | `<target>/catalog/` |
+| 2 | Drop additional ELF demos | `<target>/demos/` |
 | 3 | Download the SDK Starter | [`fusion-sdk`](https://github.com/coregraphix/fusion-sdk) releases |
 
 Tier 0 lives on the website only.
@@ -97,7 +97,7 @@ website is the customer destination.
 1. Build the demo binary from the Fusion SDK in release / archive-linkage
    mode
 2. Strip the binary
-3. Create `<target>/catalog/<demo>-v<x.y>/` with `README.md` and
+3. Create `<target>/demos/<demo>-v<x.y>/` with `README.md` and
    `manifest.json` (committed to git)
 4. Add an entry to `catalog.json`'s `targets.<target>.demos[]` array
 5. Commit + push these source files to git
@@ -111,7 +111,7 @@ The website picks up the new demo on the next `catalog.json` fetch
 
 When the FPGA design changes (new bitstream) or the OS image changes:
 
-1. Rebuild the affected asset (`.jic` for firmware, `.img.gz` for sdcard)
+1. Rebuild the affected asset (`.jic` for firmware, `.img.xz` for sdcard)
 2. For firmware: rebuild the bundle zip
    ```powershell
    $src = "nano25\setup\firmware"
