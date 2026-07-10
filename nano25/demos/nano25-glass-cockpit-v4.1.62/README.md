@@ -1,4 +1,4 @@
-# Avionics Glass Cockpit (v4.1.0)
+# Avionics Glass Cockpit
 
 Glass cockpit composition demonstrating Fusion's UI composition pipeline.
 Four UI apps run side by side on a single screen :
@@ -11,45 +11,19 @@ Four UI apps run side by side on a single screen :
 | Field | Value |
 |---|---|
 | Target | Nano25 (DE25-Nano, Agilex 5 SoC) |
-| Fusion SDK | v4.1.52 |
+| Fusion SDK | v4.1.62 |
 | Required HW (Fusion IP) | major 4, min minor 1 |
-| Binary size | 2.6 MB |
 | Build mode | release / archive linkage (static lib) |
 | Runtime deps | `libts`, `libm`, `glibc` (standard on Nano25 SD image) |
 
-## Prerequisites
+## Run
 
-Before running this demo you must complete the Nano25 **one-time setup** :
+Requires the one-time Nano25 setup (FPGA bitstream + SD card image),
+linked from the catalog UI.
 
-1. Flash the Fusion FPGA bitstream into QSPI (see `setup-firmware-v4.1.0`).
-2. Flash the Linux + Fusion SD card image (see `setup-sdcard-v4.1.0`).
-
-Both setup steps are linked from the catalog UI.
-
-## Run on your Nano25
-
-The board boots a Linux system on the FPGA fabric. SSH is enabled by default
-(`192.168.2.15`, user `root`).
-
-```bash
-# 1. Download glass_cockpit.elf from this catalog entry
-
-# 2. Push it to the Nano25
-scp glass_cockpit.elf root@<nano25-ip>:/root/
-
-# 3. Run
-ssh root@<nano25-ip> "chmod +x /root/glass_cockpit.elf && /root/glass_cockpit.elf"
-```
-
-The cockpit UI appears on the HDMI output connected to your Nano25.
-
-## Stop
-
-`Ctrl+C` in the SSH session, or :
-
-```bash
-ssh root@<nano25-ip> "pkill glass_cockpit"
-```
+Deploy and launch `glass_cockpit.elf` following the generic procedure
+in [HOW_TO_RUN.md](../HOW_TO_RUN.md). The cockpit UI appears on the
+HDMI output.
 
 ## Build it yourself
 
