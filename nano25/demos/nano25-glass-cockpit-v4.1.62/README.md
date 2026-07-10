@@ -12,7 +12,6 @@ Four UI apps run side by side on a single screen :
 |---|---|
 | Target | Nano25 (DE25-Nano, Agilex 5 SoC) |
 | Fusion SDK | v4.1.62 |
-| Required HW (Fusion IP) | major 4, min minor 1 |
 | Build mode | release / archive linkage (static lib) |
 | Runtime deps | `libts`, `libm`, `glibc` (standard on Nano25 SD image) |
 

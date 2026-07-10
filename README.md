@@ -56,9 +56,9 @@ fusion-catalog/
     │       ├── README.md
     │       └── nano25-setup-sdcard-v<x.y>.img.xz   (gitignored, Release asset)
     └── demos/                  ← Tier 2: additional ELF demos
-        ├── README.md
+        ├── HOW_TO_RUN.md       ← generic run guide (website "How to run" drawer)
         └── <demo>-v<x.y>/
-            ├── README.md       ← rendered on the website
+            ├── README.md       ← optional demo-specific doc ("Read me" link on the demo card when readme_path is set)
             ├── manifest.json
             └── <demo>.elf      (gitignored, Release asset)
 ```
