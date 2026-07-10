@@ -1,6 +1,6 @@
 {
-  "version": "1.4",
-  "updated": "2026-06-22",
+  "version": "1.5",
+  "updated": "2026-07-09",
   "github_org": "coregraphix",
   "github_repo": "fusion-catalog",
   "release_url_template": "https://github.com/{org}/{repo}/releases/download/{tag}/{file}",
@@ -20,6 +20,7 @@
       "description": "Coregraphix DE25-Nano evaluation board (Altera Agilex 5 SoC).",
       "vendor": "Terasic",
       "vendor_docs_path": "nano25/vendor/",
+      "how_to_run_path": "nano25/demos/HOW_TO_RUN.md",
       "setup": {
         "name": "Fusion-capable Nano25 (one-time setup)",
         "short_description": "Program the FPGA bitstream + flash the Linux SD card. Required before running any demo.",
