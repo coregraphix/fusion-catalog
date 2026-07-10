@@ -64,13 +64,57 @@ After flashing:
 4. Power on the Nano25 (5V DC)
 5. After ~15 seconds, the Fusion demo appears on the display
 
-If LED7 flashes but the display stays blank:
-- Verify Step 1 (firmware) was completed on this board
-- Check HDMI connection / monitor input source
+LED7 is the Fusion firmware heartbeat: it blinks (~3 Hz) as soon as
+the FPGA fabric is configured with the Fusion bitstream.
 
-If LED7 does not flash at all:
-- The HPS is not booting from SD — verify MSEL = AS mode
-  (see Terasic guide §5.4) and the SD is properly seated
+If LED7 blinks but the display stays blank:
+- The firmware (Step 1) is fine — the problem is on the SD/Linux side
+- Check HDMI connection / monitor input source
+- Check the SD card is properly seated; if needed re-flash it (Step 2)
+
+If LED7 does not blink at all:
+- The FPGA fabric is not configured — verify Step 1 (firmware) was
+  completed on this board
+- Verify MSEL = AS mode (SW5 switch: MSEL[2:0] = 001, factory
+  default — see DE25-Nano User Manual §3.1 or Getting Started
+  Guide §3.2)
+
+## Connecting to the board
+
+The image is set up for frictionless access — you get a root shell
+directly, no login or password required.
+
+### Serial console
+
+Connect the Nano25's USB-UART to your PC and open a terminal
+(PuTTY, MobaXterm, `minicom`...) at **115200 bauds, 8N1**. The
+console drops you straight into a root shell.
+
+### SSH
+
+Assign an IP address to the board from the serial console, e.g.:
+
+```sh
+ifconfig eth0 192.168.2.15
+```
+
+Then connect from your PC (same network):
+
+```sh
+ssh root@192.168.2.15
+```
+
+No password is required. You can now copy binaries with `scp` and
+run them directly:
+
+```sh
+scp my_app root@192.168.2.15:/root/
+ssh root@192.168.2.15 'chmod +x /root/my_app && /root/my_app'
+```
+
+> **Note**: this open-access configuration is intended for evaluation
+> on a local development network. To lock the board down, set a root
+> password with `passwd root`.
 
 ## Updating
 
