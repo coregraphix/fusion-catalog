@@ -24,7 +24,6 @@
       "setup": {
         "name": "Fusion-capable Nano25 (one-time setup)",
         "short_description": "Program the FPGA bitstream + flash the Linux SD card. Required before running any demo.",
-        "guide_path": "nano25/setup/README.md",
         "step1_firmware": {
           "name": "FPGA bitstream",
           "short_description": "Program the Fusion bitstream into QSPI flash via Quartus Programmer (~5 min, one-time per board).",

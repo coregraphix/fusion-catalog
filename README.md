@@ -46,7 +46,6 @@ fusion-catalog/
     ├── README.md               ← target landing (rendered on github.com)
     ├── vendor/                 ← vendor hardware documentation
     ├── setup/                  ← Tier 1: one-time provisioning
-    │   ├── README.md
     │   ├── firmware/           ← Step 1: FPGA bitstream + Quartus scripts
     │   │   ├── README.md
     │   │   ├── fusion_top_hps.jic                  (gitignored, Release asset)
