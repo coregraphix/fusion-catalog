@@ -102,12 +102,15 @@ ssh root@nano25.local
 ```
 
 No password is required. You can now copy binaries with `scp` and
-run them directly:
+run them directly — stop the boot demo first to free the display:
 
 ```sh
+ssh root@nano25.local 'systemctl stop fusion-demo'
 scp my_app root@nano25.local:/root/
 ssh root@nano25.local 'chmod +x /root/my_app && /root/my_app'
 ```
+
+The default Fusion demo comes back at the next power-up.
 
 If your network blocks mDNS (`nano25.local` does not resolve), the
 board also always carries the static address **`192.168.77.15`**:

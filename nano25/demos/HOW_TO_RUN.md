@@ -16,14 +16,17 @@ binary filename changes.
 The board configures its network by itself at boot and announces
 itself as **`nano25.local`**. No password is required.
 
-From your PC:
+The board boots into the default Fusion demo — stop it first to free
+the display, then deploy and run yours:
 
 ```bash
+ssh root@nano25.local "systemctl stop fusion-demo"
 scp <demo>.elf root@nano25.local:/root/
 ssh root@nano25.local "chmod +x /root/<demo>.elf && /root/<demo>.elf"
 ```
 
-The demo UI appears on the HDMI output.
+The demo UI appears on the HDMI output. The default demo comes back
+at the next power-up.
 
 ## 2. Stop
 
@@ -31,6 +34,14 @@ The demo UI appears on the HDMI output.
 
 ```bash
 ssh root@nano25.local "pkill <demo>"
+```
+
+## Make a demo the boot demo
+
+The boot demo is whatever `/root/fusion-demo` points to:
+
+```bash
+ssh root@nano25.local "ln -sf /root/<demo>.elf /root/fusion-demo && systemctl restart fusion-demo"
 ```
 
 ## If `nano25.local` does not resolve
@@ -48,6 +59,9 @@ ssh root@192.168.77.15
 
 - **`scp`/`ssh` cannot connect** — check the Ethernet link, and try
   the static-address fallback above.
+- **`scp: dest open ... Failure`** — the file you are overwriting is
+  currently running. Stop it first:
+  `ssh root@nano25.local "systemctl stop fusion-demo"`.
 - **Demo starts but the display stays blank** — verify the HDMI
   connection and that the one-time setup completed (LED7 must blink
   ~3 times per second: that is the Fusion firmware heartbeat).
