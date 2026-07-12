@@ -8,11 +8,12 @@ binary filename changes.
 - The one-time Nano25 setup is done (FPGA bitstream + SD card image —
   see the setup section on the Evaluate page).
 - The board is powered, with HDMI connected to a display.
-- The demos are **touch-enabled**: connect the display's USB (touch)
-  cable to the board's Type-C labelled **USB OTG** — of the two
-  side-by-side Type-C ports, it is the one closest to the board
-  corner (the other one is the programming/UART port). Without it,
-  the demos run display-only.
+- The demos are **interactive** and require a touch-enabled display:
+  connect the display's USB (touch) cable to the board's Type-C
+  labelled **USB OTG** — of the two side-by-side Type-C ports, it is
+  the one closest to the board corner (the other one is the
+  programming/UART port). Without the cable, the demos run
+  display-only.
 - Ethernet: plug the board into your LAN, **or** directly into your PC
   with a point-to-point cable — no network infrastructure needed.
 
@@ -47,6 +48,16 @@ The boot demo is whatever `/root/fusion-demo` points to:
 
 ```bash
 ssh root@nano25.local "ln -sf /root/<demo>.elf /root/fusion-demo && systemctl restart fusion-demo"
+```
+
+`systemctl restart fusion-demo` only restarts the demo process (about
+a second) — it is not a board reboot.
+
+To disable the boot demo entirely, or bring it back later:
+
+```bash
+ssh root@nano25.local "systemctl disable --now fusion-demo"
+ssh root@nano25.local "systemctl enable --now fusion-demo"
 ```
 
 ## If `nano25.local` does not resolve
