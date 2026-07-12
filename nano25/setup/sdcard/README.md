@@ -61,8 +61,11 @@ After flashing:
 1. Eject the SD card from your PC
 2. Insert it into the Nano25's MicroSD slot
 3. Connect the Nano25's HDMI to a display
-4. Power on the Nano25 (5V DC)
-5. After ~15 seconds, the Fusion demo appears on the display
+4. For touch interaction: connect the display's USB (touch) cable to
+   the board's Type-C labelled **USB OTG** (of the two side-by-side
+   Type-C ports, the one closest to the board corner)
+5. Power on the Nano25 (5V DC)
+6. After ~15 seconds, the Fusion demo appears on the display
 
 LED7 is the Fusion firmware heartbeat: it blinks (~3 Hz) as soon as
 the FPGA fabric is configured with the Fusion bitstream.
