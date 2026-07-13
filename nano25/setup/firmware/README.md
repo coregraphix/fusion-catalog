@@ -32,7 +32,7 @@ reference `..\fusion_top_hps.jic`).
 - USB Type-C cable connecting the board's USB Blaster III port to your PC
 - **Quartus Prime Pro v25.1.1+** installed with USB Blaster III driver
 - MSEL switches on the Nano25 set to AS mode: `SW5 MSEL[2:0] = 001`
-  (factory default — see [`../../vendor/DE25_Nano_Getting_Started_Guide.pdf`](../../vendor/DE25_Nano_Getting_Started_Guide.pdf) §3.2)
+  (factory default — no change needed on a fresh board)
 
 ## Procedure
 
@@ -75,13 +75,12 @@ After programming + power-cycle:
 - LED7 starts flashing (HPS boots from QSPI configuration of the FPGA + SD)
 - The FPGA fabric now exposes the Fusion GPU peripherals to the HPS
 
-Once Step 1 is complete, proceed to
-[Step 2: flash the SD card](../sdcard/README.md).
+Once Step 1 is complete, proceed to Step 2 (flash the SD card) — the
+next card on the Evaluate page.
 
 ## Notes
 
 - The `.jic` bundles the FPGA bitstream with HPS first-stage logic
   needed for the Agilex 5 SoC boot flow.
 - Quartus Prime Pro is a free download for Agilex 5 devices — no
-  paid license required. See
-  [`../../vendor/DE25_Nano_Getting_Started_Guide.pdf`](../../vendor/DE25_Nano_Getting_Started_Guide.pdf) §2.3.
+  paid license required.
