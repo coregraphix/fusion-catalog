@@ -9,11 +9,12 @@ QSPI flash until reprogrammed.
 
 ## Download
 
-The firmware is distributed as a single zip bundle attached to the
-GitHub Release `setup-firmware-v0.1`:
+The firmware is distributed as a single zip bundle attached to its
+GitHub Release — the Download button on the Evaluate page always
+points to the current one:
 
 ```
-setup-firmware-v0.1.zip   (~5 MB compressed)
+nano25-setup-firmware.zip   (~4.8 MB compressed)
 ├── README.md                                ← this guide (offline copy)
 ├── fusion_top_hps.jic                       ← FPGA bitstream + HPS first-stage (~16 MB)
 └── program_qspi_flash/
@@ -30,7 +31,7 @@ reference `..\fusion_top_hps.jic`).
 - DE25-Nano board powered (5V DC)
 - USB Type-C cable connecting the board's USB Blaster III port to your PC
 - **Quartus Prime Pro v25.1.1+** installed with USB Blaster III driver
-- MSEL switches on the Nano25 set to AS mode: `MSEL[2:0] = 001`
+- MSEL switches on the Nano25 set to AS mode: `SW5 MSEL[2:0] = 001`
   (factory default — see [`../../vendor/DE25_Nano_Getting_Started_Guide.pdf`](../../vendor/DE25_Nano_Getting_Started_Guide.pdf) §3.2)
 
 ## Procedure
