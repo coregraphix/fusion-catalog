@@ -1,6 +1,6 @@
 {
   "version": "1.5",
-  "updated": "2026-07-09",
+  "updated": "2026-07-15",
   "github_org": "coregraphix",
   "github_repo": "fusion-catalog",
   "release_url_template": "https://github.com/{org}/{repo}/releases/download/{tag}/{file}",
@@ -58,6 +58,21 @@
         }
       },
       "demos": [
+        {
+          "id": "fusion-gallery",
+          "version": "4.1.0",
+          "name": "Fusion Gallery",
+          "short_description": "Interactive tour of Fusion capabilities: vector-graphics, atomic scene-graph, multi-layers ...",
+          "screenshot_url": "https://raw.githubusercontent.com/coregraphix/fusion-catalog/main/nano25/demos/nano25-fusion-gallery-v4.1.0/screenshot.png",
+          "video_url": "https://raw.githubusercontent.com/coregraphix/fusion-catalog/main/nano25/demos/nano25-fusion-gallery-v4.1.0/preview.mp4",
+          "manifest_path": "nano25/demos/nano25-fusion-gallery-v4.1.0/manifest.json",
+          "readme_path": "nano25/demos/nano25-fusion-gallery-v4.1.0/README.md",
+          "release_tag": "nano25-fusion-gallery-v4.1.0",
+          "binary_filename": "fusion_gallery.elf",
+          "binary_size_kb": 1917,
+          "fusion_sdk": "v4.1.0",
+          "requires_setup": true
+        },
         {
           "id": "glass-cockpit",
           "version": "4.1.62",
