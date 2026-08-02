@@ -1,0 +1,21 @@
+# Binary assets — distributed via GitHub Releases, not committed to git.
+# Keep these files locally for testing but never push them: each release
+# tag (cockpit-pfd-v0.1, setup-firmware-v0.1, etc.) carries its asset.
+
+# Tier 1 setup assets
+nano25/setup/firmware/*.jic
+nano25/setup/firmware/*.zip
+nano25/setup/sdcard/*.img
+nano25/setup/sdcard/*.img.gz
+nano25/setup/sdcard/*.img.xz
+nano25/setup/sdcard/*.xz
+
+# Tier 2 demo binaries
+nano25/demos/*/*.elf
+
+# Tier 3 advanced : reference design (uploaded as Release asset only)
+nano25/refdesign/*.zip
+
+# Common build / OS artifacts
+.DS_Store
+Thumbs.db
