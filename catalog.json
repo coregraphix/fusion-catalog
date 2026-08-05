@@ -28,6 +28,7 @@
           "name": "FPGA bitstream",
           "short_description": "Program the Fusion bitstream into QSPI flash via Quartus Programmer (~5 min, one-time per board).",
           "instructions_path": "nano25/setup/firmware/README.md",
+          "version": "4.1.7",
           "release_tag": "nano25-setup-firmware-v4.1.7",
           "filename": "nano25-setup-firmware-v4.1.7.zip",
           "size_kb": 4823,
@@ -47,6 +48,7 @@
           "name": "Linux + Fusion image",
           "short_description": "Flash the Linux + Fusion userspace image onto a MicroSD card (~15 min including write time).",
           "instructions_path": "nano25/setup/sdcard/README.md",
+          "version": "4.1.63",
           "release_tag": "nano25-setup-sdcard-v4.1.63",
           "filename": "nano25-setup-sdcard-v4.1.63.img.xz",
           "size_mb": 796,
@@ -91,6 +93,7 @@
       ],
       "refdesign": {
         "name": "nano25 reference design",
+        "version": "4.1.7",
         "release_tag": "nano25-refdesign-v4.1.7",
         "filename": "nano25-refdesign-v4.1.7.zip",
         "size_mb": 3,

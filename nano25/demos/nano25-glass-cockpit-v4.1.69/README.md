@@ -10,13 +10,14 @@ layers on a single display screen.
 
 | Field | Value |
 |---|---|
-| Version | 4.1.63 (built against Fusion SDK v4.1.63) |
+| Version | 4.1.69 (built against Fusion SDK v4.1.69) |
 | Target | nano25 starter kit (DE25-Nano, Agilex 5 SoC) |
-| Input | touchscreen and/or USB mouse, optional (RTUI home button + diagnostics dashboard) — the cockpit itself runs unattended |
+| Input | touchscreen and/or USB mouse — optional, the demo plays a scripted scenario on its own |
 | Assets | the ND terrain map and PFD synthetic-vision video load from `/root/demos/glass_cockpit/` |
 
-Note : every asset the demo needs ships with the setup — it is included in the Nano25
+Note: every asset the demo needs ships with the setup — it is included in the Nano25
 SD-card image, already in place under `/root/demos/glass_cockpit/`. Nothing to install.
 
-Note : a touchscreen and a USB mouse are both strongly recommended to interact with the
-demo.
+Note: the whole cockpit is interactive, not just the scenario — every panel responds to
+touch/mouse. Input is optional (the scenario runs unattended), but a touchscreen or USB
+mouse is recommended to explore the interactive side.
