@@ -2,8 +2,6 @@
 
 Notable changes to the nano25 reference design, newest first.
 
-## [Unreleased]
-
 ## [4.2.8] - 2026-08-29
 
 ### Changed
