@@ -10,7 +10,7 @@ layers on a single display screen.
 
 | Field | Value |
 |---|---|
-| Version | 4.1.69 (built against Fusion SDK v4.1.69) |
+| Version | 4.2.70 (built against Fusion SDK v4.2.70) |
 | Target | nano25 starter kit (DE25-Nano, Agilex 5 SoC) |
 | Input | touchscreen and/or USB mouse — optional, the demo plays a scripted scenario on its own |
 | Assets | the ND terrain map and PFD synthetic-vision video load from `/root/demos/glass_cockpit/` |

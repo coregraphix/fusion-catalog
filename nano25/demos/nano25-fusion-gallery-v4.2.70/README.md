@@ -16,7 +16,7 @@ A mode toggle flips the gallery between the two composition levels of the model:
 
 | Field | Value |
 |---|---|
-| Version | 4.1.69 (built against Fusion SDK v4.1.69) |
+| Version | 4.2.70 (built against Fusion SDK v4.2.70) |
 | Target | nano25 starter kit (DE25-Nano, Agilex 5 SoC) |
 | Input | touchscreen, USB mouse, or both |
 | Assets | image-based views load BMP files from `/root/demos/fusion_gallery/assets/` |
