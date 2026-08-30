@@ -1,8 +1,6 @@
 # Changelog — Fusion SDK
 
-Notable changes to the Fusion SDK, newest first. Record every notable change
-under `[Unreleased]` as you make it; `sdk.build` stamps this section with the
-release version and injects the history into the shipped release notes.
+Notable changes to the Fusion SDK, newest first.
 
 ## [4.2.70] - 2026-08-29
 

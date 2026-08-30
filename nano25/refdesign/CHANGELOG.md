@@ -1,9 +1,6 @@
 # Changelog — nano25 reference design
 
-Notable changes to the nano25 reference design, newest first. Record every
-notable change under `[Unreleased]` as you make it; `board.build` stamps this
-section with the release version at promotion. This file ships in the
-reference-design package.
+Notable changes to the nano25 reference design, newest first.
 
 ## [Unreleased]
 

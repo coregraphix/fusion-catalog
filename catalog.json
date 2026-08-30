@@ -7,6 +7,7 @@
   "raw_url_template": "https://raw.githubusercontent.com/{org}/{repo}/main/{path}",
   "sdk": {
     "latest": {
+      "changelog_path": "sdk/CHANGELOG.md",
       "release_tag": "fusion-v4.2.70",
       "version": "4.2.70",
       "released": "2026-08-30",
@@ -92,6 +93,7 @@
         }
       ],
       "refdesign": {
+        "changelog_path": "nano25/refdesign/CHANGELOG.md",
         "name": "nano25 reference design",
         "version": "4.2.8",
         "release_tag": "nano25-refdesign-v4.2.8",
