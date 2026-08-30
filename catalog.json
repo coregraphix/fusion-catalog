@@ -11,7 +11,8 @@
       "version": "4.1.69",
       "released": "2026-07-31",
       "size_mb": 10,
-      "release_notes_url": "https://github.com/coregraphix/fusion-sdk/releases/tag/fusion-v4.1.69"
+      "release_notes_url": "https://github.com/coregraphix/fusion-sdk/releases/tag/fusion-v4.1.69",
+      "changelog_path": "sdk/CHANGELOG.md"
     }
   },
   "targets": {
@@ -97,8 +98,10 @@
         "release_tag": "nano25-refdesign-v4.1.7",
         "filename": "nano25-refdesign-v4.1.7.zip",
         "size_mb": 3,
-        "fusion_sdk": "v4.1.69"
-      }
+        "fusion_sdk": "v4.1.69",
+        "changelog_path": "nano25/refdesign/CHANGELOG.md"
+      },
+      "demos_changelog_path": "nano25/demos/CHANGELOG.md"
     }
   }
 }
