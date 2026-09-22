@@ -27,6 +27,12 @@ page is expected, not an error: that image is the current one,
 validated for the newer SDK — demos built with the newer SDK deploy
 and run on it as-is, no re-flash needed.
 
+Exception from SDK 4.3 : the demos stop Fusion when they exit and
+exit with 128+signal. Images older than v4.3 lack the matching
+`SuccessExitStatus` line in `fusion-demo.service`, so on them a
+`pkill fusion-demo` restarts the demo instead of stopping it ; use
+`systemctl stop fusion-demo`, or re-flash the v4.3 image.
+
 ## Prerequisites
 
 - A MicroSD card, ≥ 8 GB
