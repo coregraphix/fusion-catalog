@@ -1,13 +1,13 @@
 {
   "id": "fusion-gallery",
-  "version": "4.2.70",
+  "version": "4.3.72",
   "name": "Fusion Gallery",
   "short_description": "Interactive tour of Fusion capabilities: vector-graphics, atomic scene-graph, multi-layers ...",
   "target": "nano25",
   "binary": "fusion_gallery.elf",
-  "binary_size_kb": 4521,
+  "binary_size_kb": 4539,
   "build": {
-    "fusion_sdk_version": "v4.2.70",
+    "fusion_sdk_version": "v4.3.72",
     "profile": "debug",
     "link_mode": "src",
     "stripped": false

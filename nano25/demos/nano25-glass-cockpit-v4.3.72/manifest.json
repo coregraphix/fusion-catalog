@@ -1,13 +1,13 @@
 {
   "id": "glass-cockpit",
-  "version": "4.2.70",
+  "version": "4.3.72",
   "name": "Avionics Glass Cockpit",
   "short_description": "Glass cockpit composition: PFD + ND + Engine + Alerts on a single screen.",
   "target": "nano25",
   "binary": "glass_cockpit.elf",
-  "binary_size_kb": 2784,
+  "binary_size_kb": 2802,
   "build": {
-    "fusion_sdk_version": "v4.2.70",
+    "fusion_sdk_version": "v4.3.72",
     "profile": "release",
     "link_mode": "archive",
     "stripped": false
