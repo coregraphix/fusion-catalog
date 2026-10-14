@@ -11,7 +11,7 @@ Fusion GPU and the userspace will fail at hardware init.
 
 | File | Purpose |
 |---|---|
-| `nano25-setup-sdcard-v<X.Y.Z>.img.xz` | Compressed Linux + Fusion image (~800 MB compressed, ~7.5 GB uncompressed) |
+| `nano25-setup-sdcard-v<X.Y.Z>.img.xz` | Compressed Linux + Fusion image (~750 MB compressed, ~5.8 GB uncompressed) |
 
 The Download button on the Evaluate page always points to the current
 image.
@@ -44,7 +44,7 @@ and run on it as-is, no re-flash needed.
 3. Open Win32 Disk Imager
 4. Image File: select the extracted `.img`
 5. Device: select your SD card drive letter — **double-check, this will erase the card**
-6. Click **Write** — wait for completion (~15 min for 7.5 GB)
+6. Click **Write** — wait for completion (~12 min for 5.8 GB)
 7. Eject safely
 
 ### Windows — Rufus
@@ -148,3 +148,7 @@ reprogramming unless the FPGA design itself has changed.
 
 If both QSPI and SD need a coordinated update, redo Step 1 + Step 2
 in order.
+
+**Image v4.3.72** — minor update: the boot demo is up to date and
+matches the v4.3 firmware. This image needs that firmware: if your
+board still runs an older one, redo Step 1 first.
